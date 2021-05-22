@@ -1,0 +1,525 @@
+$(document).ready (function (){
+    
+<!--Dia1-->
+
+    /*  Funcion para crear un div contenedor  */
+    (function(){
+        /*Se pone en una variable para guardar todo y posteriormente usarla*/ /*Se usa otra funcion dentro de la funcion, se le llama funcion anidada*/
+        var contenedor = function(){
+            // Poner una variable y crear el documento, en este caso un div    
+            var contenedor = document.createElement('div'); /*Le especifico que quiero crear un div*/
+            // Agregar atributos a la caja 
+            contenedor.setAttribute('class', 'contenedor row justify-content-around') //El atributo será class y será contenedor /*Lo de row y justify-content son clases de bootstrap*/
+            contenedor.setAttribute('id', 'contenedor') /*El atributo es id y será contenedor
+            Para usarlo con javascript*/
+
+            /*el innerHTML es para poner codigo HTML (pero escrito así como
+            se escribe en el dom, si no con las etiquetas y así)*/
+            contenedor.innerHTML = `
+            <div id="imagen" class="imagen col-6 d-flex flex-column justify-content-center">
+            </div>
+            <div id="texto" class="texto col-6 d-flex flex-column justify-content-center"></div>
+            `
+            /*Crea 2 div's, el primero es para imagenes y el segundo es para textos*/
+
+            // Agregar el elemento de la variable al documento HTML
+            var contenido = document.getElementById('padre') //Obtener el elemento que tenga el Id, este elemento es un elemento del documento HTML
+            contenido.appendChild(contenedor) //Poner lo creado dentro de el elemento que tenga el id anterior
+        }
+        /*Que la funcion se ejecute en un tiempo determinado*/
+        setTimeout(contenedor, 3900) /*Que se ejecute la variable  una vez pasados 4 segundos*/
+    }())
+        
+    /*Imagen Dia1*/
+        (function(){
+        var img1 = function(){
+                var animacion2 = document.createElement('div');
+                animacion2.setAttribute('class', 'img1'); 
+                animacion2.setAttribute('id', 'img1'); 
+                animacion2.innerHTML = `
+                    <img src="Imagenes/1\ 10OCT.jpg">
+                `
+        
+                var contenedor = document.getElementById('imagen');
+                contenedor.appendChild(animacion2);
+            };
+            setTimeout(img1, 4200)
+        }())
+
+    /*Texto Dia1*/
+    
+    (function(){
+        var Texto = function(){
+            var texto1 = document.createElement('div');
+            texto1.setAttribute('class', 'texto1  d-flex flex-column justify-content-center');
+            texto1.setAttribute('id', 'texto1');
+            texto1.innerHTML = `
+            <h1 class="centro" id= "centro">10 Octubre 2020</h1>
+            <p>La primera vez que nos vimos despues de mas de un año. <br>
+            Fue una de nuestras primeras fotos, fue un buen dia ｡◕‿◕｡</p>
+            `
+        
+            var contenedor = document.getElementById('texto');
+            contenedor.appendChild(texto1);
+        
+        };
+            setTimeout(Texto, 4500)
+    }());
+
+    /*Eliminar dia1*/
+    (function(){
+        var eliminar = function(){
+            $('div').eq('1').remove();
+        };
+        setTimeout(eliminar, 11000)
+    }())
+
+<!--Dia 2-->
+
+    /*Agregando Dia 2*/
+    //Es exactamente lo mismo que lo pasado, solo cambia el tiempo de cuando se ejecute la variable
+    (function(){
+        var dia2 = function(){
+            var Cdia2 = document.createElement('div');
+            Cdia2.setAttribute('class', 'contenedor2 row justify-content-around')
+            Cdia2.setAttribute('id', 'contenedor')
+            Cdia2.innerHTML = `
+            <div id="imagen" class="imagen col-6 d-flex flex-column justify-content-center">
+            </div>
+            <div id="texto" class="texto col-6 d-flex flex-column justify-content-center"></div>
+            `
+
+            var contenido = document.getElementById('padre')
+            contenido.appendChild(Cdia2)
+        }
+        setTimeout(dia2, 11200)
+    }())
+    
+    /*Imagen Dia 2*/
+    (function(){
+        var Img2 = function(){
+            var img2 = document.createElement('div');
+            img2.setAttribute('class', 'img2 d-flex flex-column')
+            img2.setAttribute('id', 'img2')
+            img2.innerHTML = `
+                <img style="padding-bottom: 20px" width="300px" height="320px" src="Imagenes/2\ 24OCT.jpg">
+                <img style="padding-top: 20px" width="300px" height="320px" src="Imagenes/3\ 24OCT.jpg">
+            `
+
+            var ContImg2 = document.getElementById('imagen');
+            ContImg2.appendChild(img2)
+        };
+        setTimeout(Img2, 11300)
+    }());
+
+    /*Texto Dia2*/
+    (function(){
+        var Texto2 = function(){
+            var texto2 = document.createElement('div');
+            texto2.setAttribute('class', 'texto2  d-flex flex-column justify-content-center');
+            texto2.setAttribute('id', 'texto2');
+            texto2.innerHTML = `
+            <h1 class="centro" id= "centro">24 Octubre 2020</h1>
+            <p>Ese dia supe que estaba enamorado de ti. <br>
+            Lo recuerdo perfectamente, cuando estabamos en los columpios, cuando te di mi sudadera
+            y cuando estabamos agarrados del brazo, fue muy lindo🥺</p>
+            `
+        
+            var ConText2 = document.getElementById('texto');
+            ConText2.appendChild(texto2);
+        };
+        setTimeout(Texto2, 11300)
+    }());
+
+    /*Eliminar dia2*/
+    (function(){
+        var eliminar = function(){
+            $('div').eq('1').remove();
+        }
+        setTimeout(eliminar, 21000)
+    }())
+
+<!--Dia 3-->        
+
+    /*Agregando Dia 3*/
+    (function(){
+        var dia3 = function(){
+            var Cdia3 = document.createElement('div');
+            Cdia3.setAttribute('class', 'contenedor3 row justify-content-around')
+            Cdia3.setAttribute('id', 'contenedor')
+            Cdia3.innerHTML = `
+            <div id="imagen" class="imagen col-6 d-flex flex-row justify-content-center">
+            </div>
+            <div id="texto" class="texto col-6 d-flex flex-column justify-content-center"></div>
+            `
+
+            var contenido = document.getElementById('padre')
+            contenido.appendChild(Cdia3)
+        }
+        setTimeout(dia3, 21100)
+    }())
+
+    /*Imagen Dia 3*/
+    (function(){
+        var Img3 = function(){
+            var img3 = document.createElement('div');
+            img3.setAttribute('class', 'img3 d-flex flex-column justify-content-center')
+            img3.setAttribute('id', 'img3')
+            img3.innerHTML = `
+                <img style="padding-bottom: 20px" src="Imagenes/5\ 21NOV.jpg" width="454px" height="320px">
+                <img style="padding-top: 20px" src="Imagenes/6\ 21NOV.jpg" width="454px" height="320px">
+            `
+
+            var ContImg3 = document.getElementById('imagen');
+            ContImg3.appendChild(img3)
+        };
+        setTimeout(Img3, 21200)
+    }());
+ 
+    /*Texto Dia 3*/
+    (function(){
+        var Texto3 = function(){
+            var texto3 = document.createElement('div');
+            texto3.setAttribute('class', 'texto3  d-flex flex-column justify-content-center');
+            texto3.setAttribute('id', 'texto');
+            texto3.innerHTML = `
+            <h1 class="centro" id= "centro">21 Noviembre 2020</h1>
+            <p>Aquel hermoso dia en el cual nos hicimos novios. <br>
+            Uno de los mejores dias que he tenido.
+            No tengo palabras para describir lo lindo que fue🥺</p>
+            `
+        
+            var ConText3 = document.getElementById('texto');
+            ConText3.appendChild(texto3);
+        };
+        setTimeout(Texto3, 21200)
+    }());
+
+    /*Eliminar dia3*/
+    (function(){
+        var eliminar = function(){
+            $('div').eq('1').remove();
+        }
+        setTimeout(eliminar, 30000)
+    }())
+
+<!--Dia 4-->
+    
+    /*Agregando Dia 4*/
+    (function(){
+        var dia4 = function(){
+            var Cdia4 = document.createElement('div');
+            Cdia4.setAttribute('class', 'contenedor4 row justify-content-around')
+            Cdia4.setAttribute('id', 'contenedor')
+            Cdia4.innerHTML = `
+            <div id="imagen" class="imagen col-6 d-flex flex-row justify-content-center">
+            </div>
+            <div id="texto" class="texto col-6 d-flex flex-column justify-content-center"></div>
+            `
+
+            var contenido = document.getElementById('padre')
+            contenido.appendChild(Cdia4)
+        }
+        setTimeout(dia4, 30100)
+    }())
+        
+    /*Imagen Dia 4*/
+    (function(){
+        var Img4 = function(){
+            var img4 = document.createElement('div');
+            img4.setAttribute('class', 'img4 d-flex flex-column justify-content-center')
+            img4.setAttribute('id', 'img')
+            img4.innerHTML = `
+                <img style="padding-bottom: 20px" src="Imagenes/7\ 6feb.jpg" width="300px height="320px">
+                <img style="padding-top: 20px" src="Imagenes/8\ 6feb.jpg" width="300px height="320px">
+            `
+
+            var ContImg4 = document.getElementById('imagen');
+            ContImg4.appendChild(img4)
+        };
+        setTimeout(Img4, 30200)
+    }());
+ 
+    /*Texto Dia 4*/
+    (function(){
+        var Texto4 = function(){
+            var texto4 = document.createElement('div');
+            texto4.setAttribute('class', 'texto4  d-flex flex-column justify-content-center');
+            texto4.setAttribute('id', 'texto');
+            texto4.innerHTML = `
+            <h1 class="centro" id= "centro">6 Febrero 2020</h1>
+            <p>Aaaaaaaa, ese dia fue muy lindo, me la pasé muy bien<br>
+            Disfruté cada segundo que estuvimos juntos🥺</p>
+            `
+        
+            var ContText4 = document.getElementById('texto');
+            ContText4.appendChild(texto4);
+        };
+        setTimeout(Texto4, 30200)
+    }());   
+
+    /*Eliminar dia4*/
+    (function(){
+        var eliminar = function(){
+            $('div').eq('1').remove();
+        }
+        setTimeout(eliminar, 38000)
+    }())
+
+<!--Dia 5-->
+
+    /*Agregando Dia 5*/
+    (function(){
+        var dia5 = function(){
+            var Cdia5 = document.createElement('div');
+            Cdia5.setAttribute('class', 'contenedor5 row justify-content-around')
+            Cdia5.setAttribute('id', 'contenedor')
+            Cdia5.innerHTML = `
+            <div id="imagen" class="imagen col-6 d-flex flex-row justify-content-center">
+            </div>
+            <div id="texto" class="texto col-6 d-flex flex-column justify-content-center"></div>
+            `
+
+            var contenido = document.getElementById('padre')
+            contenido.appendChild(Cdia5)
+        }
+        setTimeout(dia5, 38100)
+    }())
+
+    /*Imagen Dia 5*/
+    (function(){
+        var Img5 = function(){
+            var img5 = document.createElement('div');
+            img5.setAttribute('class', 'img5 d-flex flex-column justify-content-center')
+            img5.setAttribute('id', 'img')
+            img5.innerHTML = `
+                <img style="padding-bottom: 20px" src="Imagenes/11\ 8ABR.jpg" width="300px height="320px">
+                <img style="padding-top: 20px" src="Imagenes/12\ 8ABR.jpg" width="300px height="320px">
+            `
+
+            var ContImg5 = document.getElementById('imagen');
+            ContImg5.appendChild(img5)
+        };
+        setTimeout(Img5, 38200)
+    }());
+ 
+    /*Texto Dia 5*/
+    (function(){
+        var Texto5 = function(){
+            var texto5 = document.createElement('div');
+            texto5.setAttribute('class', 'texto5  d-flex flex-column justify-content-center');
+            texto5.setAttribute('id', 'texto');
+            texto5.innerHTML = `
+            <h1 class="centro" id= "centro">8 Abril 2021</h1>
+            <p>Apesar de que no pudimos ver la pelicula me la pasé muy bien ese dia, fue muy lindo pasar tiempo contigo🥺<br>
+            Son de mis fotos tavoritas :)</p>
+            `
+        
+            var ContText5 = document.getElementById('texto');
+            ContText5.appendChild(texto5);
+        };
+        setTimeout(Texto5, 38200)
+    }());
+
+    /*Eliminar dia5*/
+    (function(){
+        var eliminar = function(){
+            $('div').eq('1').remove();
+        }
+        setTimeout(eliminar, 44000)
+    }())
+
+<!--Dia 6-->
+
+    /*Agregando Dia 6*/
+    (function(){
+        var dia6 = function(){
+            var Cdia6 = document.createElement('div');
+            Cdia6.setAttribute('class', 'contenedor6 row justify-content-around')
+            Cdia6.setAttribute('id', 'contenedor')
+            Cdia6.innerHTML = `
+            <div id="imagen" class="imagen col-6 d-flex flex-row justify-content-center">
+            </div>
+            <div id="texto" class="texto col-6 d-flex flex-column justify-content-center"></div>
+            `
+
+            var contenido = document.getElementById('padre')
+            contenido.appendChild(Cdia6)
+        }
+        setTimeout(dia6, 44200)
+    }())
+    
+    /*Imagen Dia 6*/
+    (function(){
+        var Img6 = function(){
+            var img6 = document.createElement('div');
+            img6.setAttribute('class', 'img6 d-flex flex-column justify-content-center')
+            img6.setAttribute('id', 'img')
+            img6.innerHTML = `
+                <img src="Imagenes/14\ 23ABRIL.jpg">
+            `
+
+            var ContImg6 = document.getElementById('imagen');
+            ContImg6.appendChild(img6)
+        };
+        setTimeout(Img6, 44210)
+    }());
+ 
+    /*Texto Dia 6*/
+    (function(){
+        var Texto6 = function(){
+            var texto6 = document.createElement('div');
+            texto6.setAttribute('class', 'texto6  d-flex flex-column justify-content-center');
+            texto6.setAttribute('id', 'texto');
+            texto6.innerHTML = `
+            <h1 class="centro" id= "centro">23 Abril 2021</h1>
+            <p>Nos vimos casi todo el dia, fue lo mejor, me gusta pasar tiempo a tu lado c: <br>
+            Que linda foto🥺</p>
+            `
+        
+            var ContText6 = document.getElementById('texto');
+            ContText6.appendChild(texto6);
+        };
+        setTimeout(Texto6, 44210)
+    }());
+
+    /*Eliminar dia6*/
+    (function(){
+        var eliminar = function(){
+            $('div').eq('1').remove();
+        }
+        setTimeout(eliminar, 51800)
+    }())
+
+<!--Dia 7-->
+
+    /*Agregando Dia 7*/
+    (function(){
+        var dia6 = function(){
+            var Cdia6 = document.createElement('div');
+            Cdia6.setAttribute('class', 'contenedor7 row justify-content-around')
+            Cdia6.setAttribute('id', 'contenedor')
+            Cdia6.innerHTML = `
+            <div id="imagen" class="imagen col-6 d-flex flex-row justify-content-center">
+            </div>
+            <div id="texto" class="texto col-6 d-flex flex-column justify-content-center"></div>
+            `
+
+            var contenido = document.getElementById('padre')
+            contenido.appendChild(Cdia6)
+        }
+        setTimeout(dia6, 51900)
+    }())
+
+    /*Imagen Dia 7*/
+    (function(){
+        var Img7 = function(){
+            var img7 = document.createElement('div');
+            img7.setAttribute('class', 'img7 d-flex flex-column justify-content-center')
+            img7.setAttribute('id', 'img')
+            img7.innerHTML = `
+            <img src="Imagenes/15\ 9MAY.jpg" style="padding-bottom:20px" width="300px" height="320px">    
+            <img src="Imagenes/19\ 9MAY.jpg" style="padding-top: 20px" width="300px" height="320px">
+
+            `
+
+            var ContImg7 = document.getElementById('imagen');
+            ContImg7.appendChild(img7)
+        };
+        setTimeout(Img7, 52100)
+    }());
+ 
+    /*Texto Dia 7*/
+    (function(){
+        var Texto7 = function(){
+            var texto7 = document.createElement('div');
+            texto7.setAttribute('class', 'texto7  d-flex flex-column justify-content-center');
+            texto7.setAttribute('id', 'texto');
+            texto7.innerHTML = `
+            <h1 class="centro" id= "centro">9 Mayo 2021</h1>
+            <p>Las ultimas fotos que nos hemos tomado.<br>
+            Fue un dia muy lindo, me la pasé muy bien jsjs</p>
+            `
+        
+            var ContText7 = document.getElementById('texto');
+            ContText7.appendChild(texto7);
+        };
+        setTimeout(Texto7, 52100)
+    }());
+
+    /*Eliminar dia7*/
+    (function(){
+        var eliminar = function(){
+            $('div').eq('1').remove();
+        }
+        setTimeout(eliminar, 60000)
+    }())
+
+<!--Agregando el texto corto-->
+
+    /*Agregando texto*/
+    (function(){
+        var texto = function(){
+            var txt = document.createElement('div')
+            txt.setAttribute('class', 'contenedor-texto6m row justify-content-around')
+            txt.innerHTML = `
+            <div class="texto d-flex flex-column justify-content-center" id="texto">
+            <p>Tantos buenos momentos que hemos pasado...</p>
+            </div>`
+
+            var content = document.getElementById('padre')
+            content.appendChild(txt)
+        }
+        setTimeout(texto, 63000)
+    }())
+
+    /*Eliminar texto*/
+    (function(){
+        var eliminar = function(){
+            $('div').eq('1').remove();
+        }
+        setTimeout(eliminar, 69000)
+    }())
+
+<!--Agregando texto largooooo-->
+    (function(){
+        var texto = function(){
+            var txt = document.createElement('div')
+            txt.setAttribute('class', 'contenedor-texto6m row justify-content-around')
+            txt.innerHTML = `
+            <div class="texto d-flex flex-column justify-content-center" id="texto">
+            <p class="txtlrg">Gracias por seguir a mi lado, gracias por permitirme ser como realmente soy <br>
+            Soy muy afortunado de tener como novia a una excelente persona, eres lo mejor que existe <br>
+            Te amo mucho💗</p>
+            </div>`
+
+            var content = document.getElementById('padre')
+            content.appendChild(txt)
+        }
+        setTimeout(texto, 69100)
+    }())
+
+    /*Eliminar texto largooooooo*/
+    (function(){
+        var eliminar = function(){
+            $('div').eq('1').remove();
+        }
+        setTimeout(eliminar, 83000)
+    }())
+
+<!--Agregando 6 meses-->
+    (function(){
+        var texto = function(){
+            var txt = document.createElement('div')
+            txt.setAttribute('class', 'contenedor-texto6m row justify-content-around')
+            txt.innerHTML = `
+            <div class="texto d-flex flex-column justify-content-center" id="texto">
+            <p class="meses">Felices 6 meses🥺💕💕</p>
+            </div>`
+
+            var content = document.getElementById('padre')
+            content.appendChild(txt)
+        }
+        setTimeout(texto, 84500)
+    }())
+})

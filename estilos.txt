@@ -1,0 +1,168 @@
+/*Aviso importante XX XDDDD
+Hay algunos estilos que empiezan con . , por ejemplo ".animated"
+El punto se pone cuando le quieres dar estilos a una clase*/
+
+/*Puse el fondo con una imagen que es una textura*/
+body{
+    background: url(../Imagenes/bg-textura.png); /*El #fff es color blanco y la url es una URL (XD) a la imagen del fondo*/
+}
+
+/*Este es la primera animacion*/
+.animated{
+    background:#fa9fb9; /*color de la caja es rosa*/
+    width: 200px; /*ancho de la caja*/
+    height: 200px;/*Alto de la caja*/
+    margin: 30px;/*unos espacios*/
+    animation: color 6s ease;/*la animacion que dice "@keyframes color", que dure 6segundos y que sea lineal*/
+}
+
+/*Diseño del corazon*/
+.corazon{
+    color: #fff; /*Que las letras(a pesar de que es un corazon no es una imagen o algo así, es un tipo texto pero es algo especial de una cosa llamada fontawesome)*/
+    font-size: 200px; /*tamaño de la fuente*/
+    animation: corazon 3s; /*la animacion "@keyframes corazon", 3 segundos */
+}
+
+/*Es para que no se quite la primera animacion tan bruscamente
+Lo explicaré mejor en el archivo de efectos.js*/
+/*Estilos del contenedor*/
+.contenedor{
+    height: 887px;
+    animation: desvanecimiento 7.2s forwards;  /*Forwards es para que se quede con los estilos que terminó*/
+    max-width: 1423px;
+}
+
+.contenedor2{
+    height: 887px;
+    max-width: 1423px;
+    animation: desvanecimiento 10.5s forwards;
+}
+
+.contenedor3{
+    height: 887px;
+    max-width: 1423px;
+    animation: desvanecimiento 9s forwards;
+}
+
+.contenedor4,
+.contenedor6,
+.contenedor7{
+    height: 887px;
+    max-width: 1423px;
+    animation: desvanecimiento 8s forwards;
+}
+
+.contenedor5{
+    height: 887px;
+    max-width: 1423px;
+    animation: desvanecimiento 6s forwards;
+}
+
+/*Estilos de la fecha*/
+.centro {
+    color: #000;
+    font-size: 30px;
+    font-family: 'Koho', sans-serif;
+}
+
+/*Estilos de texto*/
+/*Repito a cada uno por que cambia el tiempo de la animacion*/
+.texto1{
+    color: #000;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    animation: img 2s;
+    text-align: center;
+}
+
+.texto2{
+    color: #000;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    animation: img 1s;
+    text-align: center;
+}
+.texto3,
+.texto4,
+.texto5,
+.texto6,
+.texto7{
+    color: #000;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    animation: img .5s;
+    text-align: center;
+}
+
+/*La primera foto*/
+.img1{
+    margin-left: 100px;/*espacio a la izquierda de 100px*/
+    animation: img 2s; /*@keyframe img1, que dure 2 segundos*/
+}
+
+/*Estilos de el contenedor de las segundas 2 imagenes*/
+.img2{
+    margin: auto;
+    animation: img 1s;
+}
+
+.img3,
+.img4,
+.img5,
+.img6
+.img7{
+    animation: img .5s;
+}
+
+.contenedor-texto6m{
+    height: 887px;
+    max-width: 1423px;
+}
+
+.contenedor-texto6m p{
+    font-size: 40px;
+    font-family: initial;
+}
+
+.contenedor-texto6m .txtlrg {
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.contenedor-texto6m .meses{
+    font-family: 'Arimo', sans-serif;
+    font-size: 50px;
+}
+
+
+/*Animaciones*/
+
+/*Keyframe de la primera animacion*/
+@keyframes color {
+    0%{background:#fa9fb9;} /*que inicie con ese color, es rosa*/
+	50%{background: #FE749D;} /*que al 50% de la animacion, en este caso, a los 3 segundos pase a ese color, es un rosa mas fuerte*/
+    100%{background:#fa9fb9;} /*que al 100% sea el color rosa del inicio*/
+
+    /*pasa del color rosa claro al mas fuerte y luego regresa al claro*/
+}
+
+/*Keyframe del corazon */
+@keyframes corazon {
+    0%{opacity: 0;} /*que no tenga opacidad*/
+    50%{opacity: 0;} /*A partir de aquí, la */
+    100%{opacity: 1;} /*Termina con el 100% de la opacidad*/
+}
+
+/*Keyframe para agregar no tan bruscamente*/
+@keyframes img {
+    0%{opacity: 0;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+/*Keyframe para eliminar no tan bruscamente*/
+@keyframes desvanecimiento{
+    85%{opacity: 1;}
+    100%{opacity: 0;}
+}

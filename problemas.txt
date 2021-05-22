@@ -1,0 +1,9 @@
+Parar al 50% de la pagina
+<!--   Hacer visible el corazon solo cuando pare la animación   -->
+agregar clase al terminar la animacion 1 y hacer la siguiente animación con la nueva clase
+agregar clase con innerHTML
+Hacer una cuenta regresiva, cuando la cuenta llegue a 3.5 segundos, eliminar el div dentro de contenedor
+<!--   Hacer que se elimine mas suavemente  -->
+Hacer responsive y buscar las medidas del celular de dioscelina
+Poner el texto centrado
+¿Eliminar o solo cambiar?
