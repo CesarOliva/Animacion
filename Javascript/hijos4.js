@@ -7,8 +7,8 @@ $(document).ready(function(){
             img4.setAttribute('class', 'img4 d-flex flex-column justify-content-center')
             img4.setAttribute('id', 'img')
             img4.innerHTML = `
-                <img style="padding-bottom: 20px" src="Imagenes/7\ 6feb.jpg" width="300px height="320px">
-                <img style="padding-top: 20px" src="Imagenes/8\ 6feb.jpg" width="300px height="320px">
+                <img style="padding-bottom: 20px" src="Imagenes/7\ 6FEB.jpg" width="300px height="320px">
+                <img style="padding-top: 20px" src="Imagenes/8\ 6FEB.jpg" width="300px height="320px">
             `
 
             var ContImg4 = document.getElementById('imagen');

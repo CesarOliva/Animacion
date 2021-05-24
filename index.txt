@@ -1,0 +1,71 @@
+<!--Se especifica que es HTML-->
+<!DOCTYPE html>
+<!--Aqui van metadatos, etiquetas de enlace, etc-->
+<head>
+    <!--Es una cosa(no se explicar bien) que permite agregar muchos caractereres, como la ñ, y algunos signos-->
+    <meta charset="UTF-8">
+    <!--El titulo de el archivo-->
+    <title>Felices 6 Meses</title>
+    <!--Imagen al lado del titulo de la pagina-->
+    <link rel="shortcut icon" type="image/x-icon" href="Imagenes/2 24OCT.jpg">
+    <!--Para que sea adaptable a dispositivos moviles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Enlaces a documentos con los que trabajé-->
+    <!--css-->
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <!--para poner iconos (el del corazon)-->
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+    <!--Para agregar la biblioteca de jquery-->
+    <script src="Javascript/jquery-3.6.0.min.js"></script>
+    <!--Para agregar la biblioteca de gsap
+    Este es una url directa de un sitio web, contrario a las demas, que son archivos desde mi computadora-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <!--El archivo de efectos de javascript-->
+    <script src="Javascript/efectos.js"></script>
+    <!--Son archivos del dom (document object model, que es para agregar codigo html desde javascript)-->
+    <script src="Javascript/contenedor.js"></script>
+    <script src="Javascript/contenedor2.js"></script>
+    <script src="Javascript/contenedor3.js"></script>
+    <script src="Javascript/contenedor4.js"></script>
+    <script src="Javascript/contenedor5.js"></script>
+    <script src="Javascript/hijos.js"></script>
+    <script src="Javascript/hijos2.js"></script>
+    <script src="Javascript/hijos3.js"></script>
+    <script src="Javascript/hijos4.js"></script>
+    <script src="Javascript/hijos5.js"></script>
+    <script src="Javascript/hijos6.js"></script>
+    <script src="Javascript/hijos7.js"></script>
+    <script src="Javascript/eliminar.js"></script>
+    <script src="Javascript/eliminar2.js"></script>
+    <script src="Javascript/eliminar3.js"></script>
+    <script src="Javascript/eliminar4.js"></script>
+    <script src="Javascript/eliminar5.js"></script>
+    <!--Fuentes-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=KoHo:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@1,500&display=swap" rel="stylesheet">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<!--Todo lo que se muestra en el navegador-->
+<body>
+
+    <!--El codigo html de la primera animacion-->
+    <div class="contenedor" id="contenedor"> <!--La class es para darle estilos css y el id es para javascript-->
+        <div class="animated" id="box">
+            <i class="fas fa-heart corazon" id="corazon"></i> <!--Uso de fontawesome-->
+        </div>
+    </div>
+
+    <!--La animacion de las imagenes
+    Solo es eso, por que lo demas lo agregué con el dom de javascript-->
+    <div class="animacionImagenes" id="padre">
+    </div>
+    
+    <!--Sonido de fondo-->
+    <audio autoplay src="Imagenes/Bring Me The Horizon - Follow You.mp3">
+
+</body>
+</html>
